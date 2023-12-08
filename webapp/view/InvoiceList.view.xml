@@ -10,7 +10,7 @@ xmlns:mvc="sap.ui.core.mvc">
         items="{
             path: 'invoice>/Invoices',
             sorter: {
-                path: 'ShipperName',
+                path: 'CompanyCode',
                 group: true
             }
         }"
@@ -36,7 +36,7 @@ xmlns:mvc="sap.ui.core.mvc">
         </headerToolbar>
         <items>
             <ObjectListItem
-                title="{invoice>Quantity} x {invoice>ProductName}"
+                title=" {invoice>PlantName}"
                 number = "{parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false}}"
                 numberUnit="{view>/currency}"
                 numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Success' : 'Error'}"

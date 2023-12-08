@@ -9,8 +9,8 @@
         navButtonPress=".onNavBack"
     >
         <ObjectHeader
-            intro="{invoice>ShipperName}" 
-            title="{invoice>ProductName}">
+            intro="CompanyCode: {invoice>CompanyCode} " 
+            title="{invoice>PlantName} Plant Details">
         </ObjectHeader>
     </Page>
 
