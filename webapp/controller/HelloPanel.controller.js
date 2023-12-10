@@ -11,9 +11,10 @@ sap.ui.define([
             var sMsg = oBundle.getText("helloMsg", [sRecipient]);
             // show a native JavaScript alert
             MessageToast.show(sMsg);
+            console.log("Hello World");
         },
         onOpenDialog: function () {
-            this.getOwnerComponent().openHelloDialog();
+            this.getOwnerComponent().openCreateOrder();
         },
 
     });

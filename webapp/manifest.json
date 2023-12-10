@@ -58,7 +58,6 @@
       ]
     },
     "dependencies": {
-      "minUI5Version": "1.60",
       "libs": {
         "sap.m": {}
       }
@@ -97,7 +96,17 @@
         "viewPath": "sap.ui.demo.walkthrough.view",
         "controlId": "app",
         "controlAggregation": "pages",
-        "async": true
+        "async": true,
+        "sample": {
+          "files": [
+            "Detail.view.xml",
+            "Detail.controller.js",
+            "mockserver/metadata.xml",
+            "mockserver/ProductCollection.json",
+            "manifest.json"
+          ],
+          "stretch": true
+        }
       },
       "routes": [
         {

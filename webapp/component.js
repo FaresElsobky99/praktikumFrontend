@@ -2,8 +2,8 @@ sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/model/json/JSONModel",
     "sap/ui/model/resource/ResourceModel",
-    "./controller/HelloDialog"
-], function (UIComponent, JSONModel, ResourceModel, helloDialog) {
+    "./controller/CreateOrder"
+], function (UIComponent, JSONModel, ResourceModel, CreateOrder) {
     'use strict'
 
     return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
@@ -25,18 +25,18 @@ sap.ui.define([
             var oModel = new JSONModel(oData);
             this.setModel(oModel);
 
-            this._helloDialog = new helloDialog(this.getRootControl());
+            this._CreateOrder = new CreateOrder(this.getRootControl());
 
             this.getRouter().initialize();
         },
 
         exit: function () {
-            this._helloDialog.destroy();
-            delete this._helloDialog;
+            this._CreateOrder.destroy();
+            delete this._CreateOrder;
         },
 
-        openHelloDialog: function () {
-            this._helloDialog.open();
+        openCreateOrder: function () {
+            this._CreateOrder.open();
         }
     });
 }); 

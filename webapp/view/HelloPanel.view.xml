@@ -7,7 +7,7 @@ xmlns:mvc="sap.ui.core.mvc">
         width="auto">
         <content>
             <Button 
-                id="helloDialogButton"
+                id="CreateOrderButton"
                 icon="sap-icon://hello-world"
                 text="{i18n>openDialogButtonText}"
                 press=".onOpenDialog"

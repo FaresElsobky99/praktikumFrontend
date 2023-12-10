@@ -1,17 +1,31 @@
-<mvc:View
+<mvc:View 
     controllerName="sap.ui.demo.walkthrough.controller.Detail"
     xmlns="sap.m"
-    xmlns:mvc="sap.ui.core.mvc">
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:smartchart="sap.ui.comp.smartchart">
 
     <Page
         title="{i18n>detailPageTitle}"
         showNavButton="true"
-        navButtonPress=".onNavBack"
-    >
-        <ObjectHeader
-            intro="CompanyCode: {invoice>CompanyCode} " 
-            title="{invoice>PlantName} Plant Details">
-        </ObjectHeader>
-    </Page>
+        navButtonPress=".onNavBack">
+        
+        <VBox class="sapUiSmallMargin">
+            <Button 
+                text="{i18n>createNewOrder}" 
+                type="Accept" 
+                press=".onOpenDialog"
+                id="CreateOrderButton" 
+                icon="sap-icon://add-equipment"
+                class="sapUiSmallMarginTop"/>
+            <ObjectHeader
+                intro="CompanyCode: {invoice>CompanyCode}" 
+                title="{invoice>PlantName} Plant Details">
+            </ObjectHeader>
 
+
+            <smartchart:SmartChart class="sapUiResponsiveMargin">
+                <!-- SmartChart configuration goes here -->
+            </smartchart:SmartChart>
+        </VBox>
+    </Page>
 </mvc:View>
